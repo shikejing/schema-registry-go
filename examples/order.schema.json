@@ -1,0 +1,28 @@
+{
+  "id": "order-v1",
+  "name": "OrderForm",
+  "fields": [
+    { "name": "orderNo", "type": "string", "required": true },
+    { "name": "quantity", "type": "integer", "required": true, "min": 1, "max": 9999 },
+    {
+      "name": "shipTo",
+      "type": "object",
+      "required": true,
+      "ref": { "subject": "addresses" }
+    },
+    {
+      "name": "tags",
+      "type": "array",
+      "required": false,
+      "min": 0,
+      "max": 10,
+      "items": { "name": "tag", "type": "string" }
+    },
+    {
+      "name": "status",
+      "type": "string",
+      "required": true,
+      "enum": ["draft", "paid", "shipped", "done"]
+    }
+  ]
+}

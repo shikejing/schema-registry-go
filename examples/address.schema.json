@@ -1,0 +1,8 @@
+{
+  "id": "address-v1",
+  "name": "Address",
+  "fields": [
+    { "name": "city", "type": "string", "required": true, "min": 1, "max": 64 },
+    { "name": "zip", "type": "string", "required": false, "min": 4, "max": 10 }
+  ]
+}
